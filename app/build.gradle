@@ -54,6 +54,9 @@ dependencies {
     // Display Images with Picasso
     implementation 'com.squareup.picasso:picasso:2.71828'
 
+    // special way of implementation
+    implementation files("libs/card-stack-view-2.3.4.aar")
+
     implementation 'androidx.appcompat:appcompat:1.5.1'
     implementation 'com.google.android.material:material:1.7.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
