@@ -28,6 +28,7 @@ public class NewsResponse {
         return "NewsResponse{" +
                 "totalResults=" + totalResults +
                 ", articles=" + articles +
+                ", size=" + articles.size() +
                 ", code='" + code + '\'' +
                 ", message='" + message + '\'' +
                 ", status='" + status + '\'' +

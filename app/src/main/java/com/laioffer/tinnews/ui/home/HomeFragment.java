@@ -14,6 +14,7 @@ import android.view.ViewGroup;
 
 import com.laioffer.tinnews.R;
 import com.laioffer.tinnews.databinding.FragmentHomeBinding;
+import com.laioffer.tinnews.model.Article;
 import com.laioffer.tinnews.repository.NewsRepository;
 import com.laioffer.tinnews.repository.NewsViewModelFactory;
 import com.yuyakaido.android.cardstackview.CardStackLayoutManager;
@@ -98,6 +99,8 @@ public class HomeFragment extends Fragment implements CardStackListener {
         } else if (direction == Direction.Right) {
             Log.d("CardStackView", "Liked "  + layoutManager.getTopPosition());
         }
+        Article article = swipeAdapter.getArticles().get(layoutManager.getTopPosition() -1);
+        viewModel.setFavoriteArticleInput(article);
     }
 
     @Override

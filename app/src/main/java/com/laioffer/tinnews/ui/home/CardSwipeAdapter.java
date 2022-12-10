@@ -31,6 +31,10 @@ public class CardSwipeAdapter extends RecyclerView.Adapter<CardSwipeAdapter.Card
         notifyDataSetChanged();
     }
 
+    public List<Article> getArticles() {
+        return articles;
+    }
+
     @NonNull
     @Override
     public CardSwipeViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
