@@ -11,6 +11,7 @@ import com.laioffer.tinnews.model.Article;
 import com.laioffer.tinnews.model.NewsResponse;
 import com.laioffer.tinnews.network.NewsApi;
 import com.laioffer.tinnews.network.RetrofitClient;
+import com.laioffer.tinnews.ui.save.SaveViewModel;
 
 import java.util.List;
 
