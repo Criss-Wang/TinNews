@@ -6,6 +6,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.navigation.fragment.NavHostFragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 import android.util.Log;
@@ -18,6 +19,7 @@ import com.laioffer.tinnews.databinding.FragmentSaveBinding;
 import com.laioffer.tinnews.model.Article;
 import com.laioffer.tinnews.repository.NewsRepository;
 import com.laioffer.tinnews.repository.NewsViewModelFactory;
+import com.laioffer.tinnews.ui.search.SearchFragment;
 
 public class SaveFragment extends Fragment {
     private FragmentSaveBinding binding;
@@ -58,8 +60,10 @@ public class SaveFragment extends Fragment {
         savedNewsAdapter.setItemCallback(new SavedNewsAdapter.ItemCallback() {
             @Override
             public void onOpenDetails(Article article) {
-                // TODO
                 Log.d("onOpenDetails", article.toString());
+                SaveFragmentDirections.ActionNavigationSaveToNavigationDetails direction =
+                        SaveFragmentDirections.actionNavigationSaveToNavigationDetails(article);
+                NavHostFragment.findNavController(SaveFragment.this).navigate(direction);
             }
 
             @Override

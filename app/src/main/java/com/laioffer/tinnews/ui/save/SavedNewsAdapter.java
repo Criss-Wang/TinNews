@@ -18,14 +18,13 @@ import java.util.List;
 
 public class SavedNewsAdapter extends RecyclerView.Adapter<SavedNewsAdapter.SavedNewsViewHolder> {
     // 1. Supporting data:
-    private List<Article> articles = new ArrayList<>();
-    private ItemCallback itemCallback;
-
     public interface ItemCallback {
         void onOpenDetails(Article article);
         void onRemoveFavorite(Article article);
     }
 
+    private List<Article> articles = new ArrayList<>();
+    private ItemCallback itemCallback;
 
     public void setItemCallback(ItemCallback itemCallback) {
         this.itemCallback = itemCallback;
